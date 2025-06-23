@@ -1,0 +1,4 @@
+-- SELECT SUM(amount) FROM Payments;
+-- SELECT MAX(amount),MIN(amount) FROM Payments;
+-- SELECT AVG(amount) FROM Payments;
+-- SELECT ROUND(AVG(amount)) FROM Payments;
