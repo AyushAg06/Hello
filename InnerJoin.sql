@@ -1,0 +1,42 @@
+-- INNER JOINS 
+-- CREATE TABLE payments (
+--     customer_id INTEGER,
+--     amount NUMERIC(10,2),
+--     mode VARCHAR(50),
+--     payment_date DATE
+-- );
+-- INSERT INTO payments (customer_id, amount, mode, payment_date) VALUES
+-- (101, 2500.00, 'Credit Card', '2025-06-01'),
+-- (102, 1500.50, 'UPI', '2025-06-05'),
+-- (103, 3200.75, 'Net Banking', '2025-06-10'),
+-- (104,  999.99, 'Cash', '2025-06-15'),
+-- (105, 2000.00, 'Debit Card', '2025-06-20'),
+-- (106, 2345.00, 'UPI', '2025-06-21'),
+-- (107, 2300.00, 'Credit Card', '2025-06-11'),
+-- (108, 2005.00, 'UPI', '2025-06-23');
+-- CREATE TABLE customer
+-- ("customer_id" integer,
+-- "amount" numeric,
+-- "mode" varchar(50),
+-- "address" varchar(10)
+-- );
+-- INSERT INTO customer
+-- (customer_id,amount,mode,address)
+-- VALUES
+-- (101, 2500.00, 'Credit Card', 'DELHI'),
+-- (102, 1500.50, 'UPI', 'BOMBAY'),
+-- (103, 3200.75, 'Net Banking', 'PUNE'),
+-- (104,  999.99, 'Cash', 'KOLKATA'),
+-- (105, 2000.00, 'Debit Card', 'DELHI'),
+-- (106, 2345.00, 'UPI', 'CHANDIGARH'),
+-- (107, 2300.00, 'Credit Card', 'KOLKATA'),
+-- (108, 2005.00, 'UPI', 'LUCKNOW');
+-- SELECT * FROM customer
+-- SELECT * 
+-- FROM customer AS c
+-- INNER JOIN payments AS p
+-- ON c.customer_id=p.customer_id;
+SELECT c.amount,p.payment_date
+FROM customer AS c
+INNER JOIN payments AS p
+ON c.customer_id=p.customer_id;
